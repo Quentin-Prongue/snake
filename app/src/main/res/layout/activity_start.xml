@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <!-- Barre de l'application -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <!-- Bouton pour jouer -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="120dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Le nom du joueur -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/player_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_player_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Layout pour les paramètres -->
+    <FrameLayout
+        android:id="@+id/fl_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- Le nombre de pommes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/apple_number"
+            android:textSize="20sp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sl_apple_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:stepSize="1.0"
+            android:value="2.0"
+            android:valueFrom="1.0"
+            android:valueTo="10.0" />
+
+        <!-- La vitesse du serpent -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="200dp"
+            android:text="@string/snake_speed"
+            android:textSize="20sp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sl_snake_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:stepSize="1.0"
+            android:value="12.0"
+            android:valueFrom="1.0"
+            android:valueTo="12.0" />
+
+        <!-- Séparateur -->
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            app:dividerColor="@color/green" />
+
+        <!-- Bouton pour appliquer les modifications -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_settings_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="90dp"
+            android:text="@string/apply" />
+
+        <!-- Bouton pour annuler les modifications -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_settings_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/cancel" />
+    </FrameLayout>
+
+    <!-- Layout pour les thèmes -->
+    <FrameLayout
+        android:id="@+id/fl_themes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- Radio pour le thème du jeu -->
+        <RadioGroup
+            android:id="@+id/rg_theme_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+            <!-- Thème vert -->
+            <RadioButton
+                android:id="@+id/rb_theme_vert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:checked="true"
+                android:text="@string/green_theme"
+                android:textSize="20sp" />
+
+            <!-- Thème bleu -->
+            <RadioButton
+                android:id="@+id/rb_theme_bleu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/blue_theme"
+                android:textSize="20sp" />
+
+            <!-- Thème volcan -->
+            <RadioButton
+                android:id="@+id/rb_theme_volcan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/volcano_theme"
+                android:textSize="20sp" />
+
+            <!-- Thème neige -->
+            <RadioButton
+                android:id="@+id/rb_theme_neige"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/snow_theme"
+                android:textSize="20sp" />
+
+            <!-- Thème nuit -->
+            <RadioButton
+                android:id="@+id/rb_theme_nuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/night_theme"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <!-- Séparateur -->
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            app:dividerColor="@color/green" />
+
+        <!-- Bouton pour appliquer le thème -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_themes_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="90dp"
+            android:text="@string/apply" />
+
+        <!-- Bouton pour annuler le thème -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_themes_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/cancel" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

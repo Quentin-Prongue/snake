@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snake</string>
+    <string name="game_status_start">Press to start the game</string>
+    <string name="game_status_end">Game Over</string>
+    <string name="game_status_pause">Game pause</string>
+    <string name="player_name">Player name</string>
+    <string name="start">Start</string>
+    <string name="restart">Restart</string>
+    <string name="settings">Settings</string>
+    <string name="apple_number">Apple number</string>
+    <string name="snake_speed">Snake speed (Smaller = faster)</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="themes">Game themes</string>
+    <string name="theme_choice">Choose a theme</string>
+    <string name="end_game">End game</string>
+    <string name="green_theme">Green</string>
+    <string name="blue_theme">Blue</string>
+    <string name="volcano_theme">Volcano</string>
+    <string name="snow_theme">Snow</string>
+    <string name="night_theme">Night</string>
+    <string name="quit">Quit</string>
+    <string name="position">Position</string>
+    <string name="name">Name</string>
+    <string name="score">Score</string>
+</resources>

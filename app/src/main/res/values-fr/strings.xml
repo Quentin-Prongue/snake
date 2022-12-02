@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snake</string>
+    <string name="game_status_start">Appuyer pour commencer le jeu</string>
+    <string name="game_status_end">Game Over</string>
+    <string name="game_status_pause">Jeu en pause</string>
+    <string name="player_name">Nom du joueur</string>
+    <string name="start">Jouer</string>
+    <string name="restart">Rejouer</string>
+    <string name="settings">Paramètres</string>
+    <string name="apple_number">Nombre de pommes</string>
+    <string name="snake_speed">Vitesse du serpent (Plus petit = plus rapide)</string>
+    <string name="apply">Appliquer</string>
+    <string name="cancel">Annuler</string>
+    <string name="themes">Thèmes du jeu</string>
+    <string name="theme_choice">Choix du thème</string>
+    <string name="end_game">Fin du jeu</string>
+    <string name="green_theme">Vert</string>
+    <string name="blue_theme">Bleu</string>
+    <string name="volcano_theme">Volcan</string>
+    <string name="snow_theme">Neige</string>
+    <string name="night_theme">Nuit</string>
+    <string name="quit">Quitter</string>
+    <string name="position">Position</string>
+    <string name="name">Nom</string>
+    <string name="score">Score</string>
+</resources>
